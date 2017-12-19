@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="angularjs,前端," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="angularjs是一本热门的技术，如何学习这一技术呢？本文将简要的说一下。">
+<meta name="keywords" content="angularjs,前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="angularjs 学习的那些事儿(1)">
+<meta property="og:url" content="http://www.essamjo.com/2016/02/15/angularjs-学习的那些事儿-1/index.html">
+<meta property="og:site_name" content="池塘亦恕">
+<meta property="og:description" content="angularjs是一本热门的技术，如何学习这一技术呢？本文将简要的说一下。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2016-02-16T08:29:20.678Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="angularjs 学习的那些事儿(1)">
+<meta name="twitter:description" content="angularjs是一本热门的技术，如何学习这一技术呢？本文将简要的说一下。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.essamjo.com/2016/02/15/angularjs-学习的那些事儿-1/"/>
+
+
+
+
+
+  <title>angularjs 学习的那些事儿(1) | 池塘亦恕</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">池塘亦恕</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">亦恕仰望天空</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.essamjo.com/2016/02/15/angularjs-学习的那些事儿-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="essam">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="池塘亦恕">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">angularjs 学习的那些事儿(1)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-02-15T17:40:12+08:00">
+                2016-02-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端技术/" itemprop="url" rel="index">
+                    <span itemprop="name">前端技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  angularjs是一本热门的技术，如何学习这一技术呢？本文将简要的说一下。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="一、为什么学习angularjs"><a href="#一、为什么学习angularjs" class="headerlink" title="一、为什么学习angularjs"></a>一、为什么学习angularjs</h3><p>在现有的前端工程师的招聘中很多都需要掌握这样的框架。说明这是一个比较热门的框架。如果需要继续在前端发展，了解他是不可或缺的。</p>
+<h3 id="二、如何学习angularjs"><a href="#二、如何学习angularjs" class="headerlink" title="二、如何学习angularjs"></a>二、如何学习angularjs</h3><h4 id="1-了解angularjs的核心"><a href="#1-了解angularjs的核心" class="headerlink" title="1.了解angularjs的核心"></a>1.了解angularjs的核心</h4><p>AngularJS有着诸多特性，最为核心的是：MVVM、模块化、自动化双向数据绑定、语义化标签、依赖注入等等。</p>
+<h4 id="2-了解angularjs的理念"><a href="#2-了解angularjs的理念" class="headerlink" title="2.了解angularjs的理念"></a>2.了解angularjs的理念</h4><p>Angular信奉的是，当组建视图(UI)同时又要写软件逻辑时，<font color="red">声明式的代码</font>会比命令式的代码好得多，尽管命令式的代码非常适合用来表述业务逻辑。</p>
+<h4 id="3-了解别人对angularjs的评价"><a href="#3-了解别人对angularjs的评价" class="headerlink" title="3.了解别人对angularjs的评价"></a>3.了解别人对angularjs的评价</h4><p><a href="http://www.zhihu.com/question/22284218" target="_blank" rel="noopener">AngularJS 在实际应用中有哪些优缺点？</a><br><a href="http://damoqiongqiu.iteye.com/blog/2255046" target="_blank" rel="noopener">代码狗必看：前端开发3大坑</a></p>
+<h4 id="4-了解angularjs的适用场景"><a href="#4-了解angularjs的适用场景" class="headerlink" title="4.了解angularjs的适用场景"></a>4.了解angularjs的适用场景</h4><ul>
+<li>AngularJS主要考虑的是构建CRUD（增加Create、查询Retrieve、更新Update、删除Delete）应用。</li>
+<li>AngularJS的目标之一是简化开发过程，这使得AngularJS非常善于构建小型app原型。</li>
+<li>如游戏，图形界面编辑器，这种DOM操作很频繁也很复杂的应用不适合用AngularJS来构建。像这种情况用一些更轻量、简单的技术如jQuery可能会更好。</li>
+</ul>
+<h3 id="三、Angular中service、controller、directive的认识和理解如下"><a href="#三、Angular中service、controller、directive的认识和理解如下" class="headerlink" title="三、Angular中service、controller、directive的认识和理解如下"></a>三、Angular中service、controller、directive的认识和理解如下</h3><p>Service就是单例对象在AngluarJS 中的一个别名。这些单例对象会被经常传来传去，保证你每次访问到的都是同一个实例。基于这种思想，单例对象让我们可以实现一些相当酷的功能，它可以让很多controller和directive访问其内部的数值。</p>
+<p>controller把service、依赖关系、以及其它对象串联到一起，然后通过scope把它们关联到view上。如果在你的视图里面需要处理复杂的业务逻辑，那么把它们放到controller里面也是一个非常不错的选择。</p>
+<p><strong>Controller 使用过程中的注意点</strong></p>
+<ul>
+<li>不要试图复用Controller , 一个控制器一般只负责一小块视图</li>
+<li>不要在Controller中操作DOM，这不是控制器的职责</li>
+<li>不要在Controller里做数据格式化，ng有很好用的表单控件</li>
+<li>不要在Controller里做数据过滤操作，ng有$filter服务</li>
+<li>一般来说，<font color="red">Controller是不会互相调用的</font>，控制器之间的交互会通过事件进行</li>
+</ul>
+<p>Angular对directive的定义是一段代码片段，你可以用它来操作DOM，也可以使用它来进行用户交互。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/angularjs/" rel="tag"># angularjs</a>
+          
+            <a href="/tags/前端/" rel="tag"># 前端</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/02/15/转-AngularJS-应用身份认证的技巧/" rel="prev" title="[转]AngularJS 应用身份认证的技巧">
+                [转]AngularJS 应用身份认证的技巧 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">essam</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、为什么学习angularjs"><span class="nav-number">1.</span> <span class="nav-text"><a href="#&#x4E00;&#x3001;&#x4E3A;&#x4EC0;&#x4E48;&#x5B66;&#x4E60;angularjs" class="headerlink" title="&#x4E00;&#x3001;&#x4E3A;&#x4EC0;&#x4E48;&#x5B66;&#x4E60;angularjs"></a>&#x4E00;&#x3001;&#x4E3A;&#x4EC0;&#x4E48;&#x5B66;&#x4E60;angularjs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、如何学习angularjs"><span class="nav-number">2.</span> <span class="nav-text"><a href="#&#x4E8C;&#x3001;&#x5982;&#x4F55;&#x5B66;&#x4E60;angularjs" class="headerlink" title="&#x4E8C;&#x3001;&#x5982;&#x4F55;&#x5B66;&#x4E60;angularjs"></a>&#x4E8C;&#x3001;&#x5982;&#x4F55;&#x5B66;&#x4E60;angularjs</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-了解angularjs的核心"><span class="nav-number">2.1.</span> <span class="nav-text"><a href="#1-&#x4E86;&#x89E3;angularjs&#x7684;&#x6838;&#x5FC3;" class="headerlink" title="1.&#x4E86;&#x89E3;angularjs&#x7684;&#x6838;&#x5FC3;"></a>1.&#x4E86;&#x89E3;angularjs&#x7684;&#x6838;&#x5FC3;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-了解angularjs的理念"><span class="nav-number">2.2.</span> <span class="nav-text"><a href="#2-&#x4E86;&#x89E3;angularjs&#x7684;&#x7406;&#x5FF5;" class="headerlink" title="2.&#x4E86;&#x89E3;angularjs&#x7684;&#x7406;&#x5FF5;"></a>2.&#x4E86;&#x89E3;angularjs&#x7684;&#x7406;&#x5FF5;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-了解别人对angularjs的评价"><span class="nav-number">2.3.</span> <span class="nav-text"><a href="#3-&#x4E86;&#x89E3;&#x522B;&#x4EBA;&#x5BF9;angularjs&#x7684;&#x8BC4;&#x4EF7;" class="headerlink" title="3.&#x4E86;&#x89E3;&#x522B;&#x4EBA;&#x5BF9;angularjs&#x7684;&#x8BC4;&#x4EF7;"></a>3.&#x4E86;&#x89E3;&#x522B;&#x4EBA;&#x5BF9;angularjs&#x7684;&#x8BC4;&#x4EF7;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-了解angularjs的适用场景"><span class="nav-number">2.4.</span> <span class="nav-text"><a href="#4-&#x4E86;&#x89E3;angularjs&#x7684;&#x9002;&#x7528;&#x573A;&#x666F;" class="headerlink" title="4.&#x4E86;&#x89E3;angularjs&#x7684;&#x9002;&#x7528;&#x573A;&#x666F;"></a>4.&#x4E86;&#x89E3;angularjs&#x7684;&#x9002;&#x7528;&#x573A;&#x666F;</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、Angular中service、controller、directive的认识和理解如下"><span class="nav-number">3.</span> <span class="nav-text"><a href="#&#x4E09;&#x3001;Angular&#x4E2D;service&#x3001;controller&#x3001;directive&#x7684;&#x8BA4;&#x8BC6;&#x548C;&#x7406;&#x89E3;&#x5982;&#x4E0B;" class="headerlink" title="&#x4E09;&#x3001;Angular&#x4E2D;service&#x3001;controller&#x3001;directive&#x7684;&#x8BA4;&#x8BC6;&#x548C;&#x7406;&#x89E3;&#x5982;&#x4E0B;"></a>&#x4E09;&#x3001;Angular&#x4E2D;service&#x3001;controller&#x3001;directive&#x7684;&#x8BA4;&#x8BC6;&#x548C;&#x7406;&#x89E3;&#x5982;&#x4E0B;</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">essam</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
