@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -53,16 +53,8 @@
 <link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
 
 
 
@@ -79,17 +71,17 @@
 
 
 
-<meta name="description" content="把图片的相对路径改成绝对路径var content = &amp;apos;thisis&amp;lt;img src=&amp;quot;abc.jpg&amp;quot; width=&amp;quot;50&amp;quot; /&amp;gt;&amp;lt;img src=&amp;quot;cde.jpg&amp;quot; /&amp;gt;&amp;apos;; var originHost=&amp;apos;http://www.baidu.com/&amp;apos;; content">
+<meta name="description" content="把图片的相对路径改成绝对路径123456789101112131415var content = &amp;apos;thisis&amp;lt;img src=&amp;quot;abc.jpg&amp;quot; width=&amp;quot;50&amp;quot; /&amp;gt;&amp;lt;img src=&amp;quot;cde.jpg&amp;quot; /&amp;gt;&amp;apos;;var originHost=&amp;apos;http://www.baidu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js正则替换图片路径">
 <meta property="og:url" content="http://www.essamjo.com/2017/12/18/js正则替换图片路径/index.html">
 <meta property="og:site_name" content="池塘亦恕">
-<meta property="og:description" content="把图片的相对路径改成绝对路径var content = &amp;apos;thisis&amp;lt;img src=&amp;quot;abc.jpg&amp;quot; width=&amp;quot;50&amp;quot; /&amp;gt;&amp;lt;img src=&amp;quot;cde.jpg&amp;quot; /&amp;gt;&amp;apos;; var originHost=&amp;apos;http://www.baidu.com/&amp;apos;; content">
+<meta property="og:description" content="把图片的相对路径改成绝对路径123456789101112131415var content = &amp;apos;thisis&amp;lt;img src=&amp;quot;abc.jpg&amp;quot; width=&amp;quot;50&amp;quot; /&amp;gt;&amp;lt;img src=&amp;quot;cde.jpg&amp;quot; /&amp;gt;&amp;apos;;var originHost=&amp;apos;http://www.baidu">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-18T08:10:57.321Z">
+<meta property="og:updated_time" content="2017-12-19T09:15:57.211Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js正则替换图片路径">
-<meta name="twitter:description" content="把图片的相对路径改成绝对路径var content = &amp;apos;thisis&amp;lt;img src=&amp;quot;abc.jpg&amp;quot; width=&amp;quot;50&amp;quot; /&amp;gt;&amp;lt;img src=&amp;quot;cde.jpg&amp;quot; /&amp;gt;&amp;apos;; var originHost=&amp;apos;http://www.baidu.com/&amp;apos;; content">
+<meta name="twitter:description" content="把图片的相对路径改成绝对路径123456789101112131415var content = &amp;apos;thisis&amp;lt;img src=&amp;quot;abc.jpg&amp;quot; width=&amp;quot;50&amp;quot; /&amp;gt;&amp;lt;img src=&amp;quot;cde.jpg&amp;quot; /&amp;gt;&amp;apos;;var originHost=&amp;apos;http://www.baidu">
 
 
 
@@ -97,7 +89,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Pisces',
     version: '5.1.3',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -299,22 +291,7 @@
       
 
       
-        <h3 id="把图片的相对路径改成绝对路径"><a href="#把图片的相对路径改成绝对路径" class="headerlink" title="把图片的相对路径改成绝对路径"></a>把图片的相对路径改成绝对路径</h3><pre><code>var content = &apos;thisis&lt;img src=&quot;abc.jpg&quot; width=&quot;50&quot; /&gt;&lt;img src=&quot;cde.jpg&quot; /&gt;&apos;;
-var originHost=&apos;http://www.baidu.com/&apos;;
-content.replace(/&lt;img [^&gt;]*src=[&apos;&quot;]([^&apos;&quot;]+)[^&gt;]*&gt;/gi, function (match, capture) {
-     // console.log(&apos;capture=&apos;+capture);
-     // console.log(&apos;match=&apos;+match);
-    var tmp =&apos;&apos;;
-    var absoluteSrcRegx=/http:/gi.test(capture)||/https:/gi.test(capture)
-    if (!absoluteSrcRegx) {
-    //    console.log(&apos;===&apos;)
-        tmp= match.replace(capture,originHost+capture);
-        return tmp
-    }else{
-        return match
-    }
-})
-</code></pre>
+        <h3 id="把图片的相对路径改成绝对路径"><a href="#把图片的相对路径改成绝对路径" class="headerlink" title="把图片的相对路径改成绝对路径"></a>把图片的相对路径改成绝对路径</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var content = &apos;thisis&lt;img src=&quot;abc.jpg&quot; width=&quot;50&quot; /&gt;&lt;img src=&quot;cde.jpg&quot; /&gt;&apos;;</span><br><span class="line">var originHost=&apos;http://www.baidu.com/&apos;;</span><br><span class="line">content.replace(/&lt;img [^&gt;]*src=[&apos;&quot;]([^&apos;&quot;]+)[^&gt;]*&gt;/gi, function (match, capture) &#123;</span><br><span class="line"> 	// console.log(&apos;capture=&apos;+capture);</span><br><span class="line"> 	// console.log(&apos;match=&apos;+match);</span><br><span class="line">	var tmp =&apos;&apos;;</span><br><span class="line">	var absoluteSrcRegx=/http:/gi.test(capture)||/https:/gi.test(capture)</span><br><span class="line">	if (!absoluteSrcRegx) &#123;</span><br><span class="line">	//    console.log(&apos;===&apos;)</span><br><span class="line">		tmp= match.replace(capture,originHost+capture);</span><br><span class="line">    	return tmp</span><br><span class="line">	&#125;else&#123;</span><br><span class="line">		return match</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -518,7 +495,7 @@ content.replace(/&lt;img [^&gt;]*src=[&apos;&quot;]([^&apos;&quot;]+)[^&gt;]*&gt
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.3</div>
 
 
 
@@ -617,6 +594,13 @@ content.replace(/&lt;img [^&gt;]*src=[&apos;&quot;]([^&apos;&quot;]+)[^&gt;]*&gt
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
